@@ -36,7 +36,15 @@ def press_start():
     elif choose_your_fight == "PLAYER 2".lower:
         print(otrio_grid)
     else:
-        print("")
+        print(Fore.YELLOW + "Don't make me laugh that is not a number you utter buffoon. ")
+        print(Fore.RED + "Try again.")
+        while choose_your_fight != "PLAYER 1".lower or "PLAYER 2".lower or game_end:
+            choose_your_fight = input("Who do you wish to face:\nPLAYER 1 or PLAYER 2?")
+        if choose_your_fight == "PLAYER 1".lower:
+            print(otrio_grid)
+        elif choose_your_fight == "PLAYER 2".lower:
+            print(otrio_grid)
+
 
 
 
