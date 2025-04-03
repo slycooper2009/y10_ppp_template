@@ -35,6 +35,7 @@ def press_start():
         print(otrio_grid)
     elif choose_your_fight == "PLAYER 2".lower:
         print(otrio_grid)
+        
     else:
         print(Fore.YELLOW + "Don't make me laugh that is not a number you utter buffoon. ")
         print(Fore.RED + "Try again.")
