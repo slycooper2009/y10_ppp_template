@@ -7,7 +7,7 @@ def type_effect(str):
     str = list(str)
     for i in str:
         print(i, end="")
-        sleep(2)
+        sleep(0.4)
 #Opening screen
 player_1_intro = type_effect(Fore.RED + "This is the Game that will bring your demise.")
 player_2_intro = type_effect(Fore.RED + "The Game where you dance with death.")
