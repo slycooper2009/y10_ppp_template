@@ -9,8 +9,8 @@ def type_effect(str):
         print(i, end="")
         sleep(0.4)
 #Opening screen
-player_1_intro = print(type_effect(Fore.RED + "This is the Game that will bring your demise.") - None)
-player_2_intro = print(type_effect(Fore.RED + "The Game where you dance with death.") - None)
+player_1_intro = print(type_effect(Fore.RED + "This is the Game that will bring your demise."))
+player_2_intro = print(type_effect(Fore.RED + "The Game where you dance with death."))
 sleep(5)
 os.system('cls' if os.name == 'nt' else 'clear')
 type_effect(Fore.RED + "WECLOME PLAYER TO OTRIO\n")
