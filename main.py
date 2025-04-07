@@ -34,7 +34,7 @@ def press_start():
     game_end = False
     while game_end != True:
         print(Fore.MAGENTA + "Type what you want to do.")
-        what_u_want_to_do = input(Fore.BLUE + "(Press Play)",Fore.GREEN + "\n(Rules)",Fore.RED + "\n(I Give Up)")
+        what_u_want_to_do = input(Fore.BLUE + "(Press Play)\n(Rules)\n(I Give Up)\n")
         if what_u_want_to_do == "(Press Play)":
             choose_your_fight = input("Who do you wish to face:\nPLAYER 1 or PLAYER 2?")
             if choose_your_fight == "PLAYER 1".lower:
