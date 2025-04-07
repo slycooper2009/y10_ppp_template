@@ -4,8 +4,11 @@ from time import sleep
 #Opening screen
 player_1_intro = print(Fore.RED + "This is the Game that will bring your demise.")
 player_2_intro = print(Fore.RED + "The Game where you dance with death.")
-os.system('cls')
-open_screen = print(Fore.RED + "WECLOME PLAYER TO OTRIO")
+sleep(5)
+os.system('cls' if os.name == 'nt' else 'clear')
+print(Fore.RED + "WECLOME PLAYER") 
+sleep(2)
+print(Fore.RED +"TO OTRIO")
 #Grid List
 otrio_grid = [[' ', ' ', ' '],
               [' ', ' ', ' '],
