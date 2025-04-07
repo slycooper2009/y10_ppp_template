@@ -1,14 +1,19 @@
 from colorama import Fore
 import os
 from time import sleep
+#I found this online wanted to try it out
+#I understand how it works
+def type_effect(str):
+    str = list(str)
+    for i in str:
+        print(i, end="")
+        sleep(0.2)
 #Opening screen
-player_1_intro = print(Fore.RED + "This is the Game that will bring your demise.")
-player_2_intro = print(Fore.RED + "The Game where you dance with death.")
+player_1_intro = type_effect(Fore.RED + "This is the Game that will bring your demise.")
+player_2_intro = type_effect(Fore.RED + "The Game where you dance with death.")
 sleep(5)
 os.system('cls' if os.name == 'nt' else 'clear')
-print(Fore.RED + "WECLOME PLAYER") 
-sleep(2)
-print(Fore.RED +"TO OTRIO")
+type_effect(Fore.RED + "WECLOME PLAYER TO OTRIO")
 #Grid List
 otrio_grid = [[' ', ' ', ' '],
               [' ', ' ', ' '],
