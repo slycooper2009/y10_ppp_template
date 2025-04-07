@@ -49,7 +49,7 @@ def press_start():
         elif what_u_want_to_do == "(I Give Up)":
             game_end = True
 
-#press_start()
+press_start()
 
 
 big_token, medium_token, small_token = reset_tokens(Fore.BLUE)
