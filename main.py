@@ -1,4 +1,5 @@
 from colorama import Fore
+import os
 #Opening screen
 player_1_intro = print(Fore.RED + "This is the Game that will bring your demise.")
 player_2_intro = print(Fore.RED + "The Game where you dance with death.")
@@ -16,8 +17,6 @@ def reset_tokens(colour):
     small_token = [colour + "o", "o", "o"]
 
     return big_token, medium_token, small_token
-
-print(reset_tokens)
 
 #rules
 def rules_call():
@@ -44,6 +43,7 @@ def press_start():
             else:
                 print(Fore.YELLOW + "Don't make me laugh that is not a number you utter buffoon. ")
         elif what_u_want_to_do == "(Rules)":
+            os.system('cls')
             rules_call()
         elif what_u_want_to_do == "(I Give Up)":
             game_end = True
