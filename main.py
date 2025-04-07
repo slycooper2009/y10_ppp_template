@@ -13,7 +13,7 @@ player_1_intro = type_effect(Fore.RED + "This is the Game that will bring your d
 player_2_intro = type_effect(Fore.RED + "The Game where you dance with death.")
 sleep(5)
 os.system('cls' if os.name == 'nt' else 'clear')
-type_effect(Fore.RED + "WECLOME PLAYER TO OTRIO")
+type_effect(Fore.RED + "WECLOME PLAYER TO OTRIO\n")
 #Grid List
 otrio_grid = [[' ', ' ', ' '],
               [' ', ' ', ' '],
