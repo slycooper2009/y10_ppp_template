@@ -66,25 +66,25 @@ def press_play(otrio_grid):
         print(otrio_grid)
         location_of_tile = input("")
         if 'o' in location_of_tile:
-            if '1' and 'A'.lower() in location_of_tile:
+            if '1' in location_of_tile and 'A'.lower() in location_of_tile:
                 otrio_grid.insert(1, 'o')
             elif '2' and 'B'.lower() in location_of_tile:
                 otrio_grid.insert(2, 'o')
-            elif '3' and 'B'.lower() in location_of_tile:
+            elif '3' and 'C'.lower() in location_of_tile:
                 otrio_grid.insert(3, 'o')
         elif 'O' in location_of_tile:
             if '1' and 'A'.lower() in location_of_tile:
                 otrio_grid.insert(4, 'o')
             elif '2' and 'B'.lower() in location_of_tile:
                 otrio_grid.insert(5, 'o')
-            elif '3' and 'B'.lower() in location_of_tile:
+            elif '3' and 'C'.lower() in location_of_tile:
                 otrio_grid.insert(6, 'o')
         elif '0' in location_of_tile:
             if '1' and 'A'.lower() in location_of_tile:
                 otrio_grid.insert(7, 'o')
             elif '2' and 'B'.lower() in location_of_tile:
                 otrio_grid.insert(8, 'o')
-            elif '3' and 'B'.lower() in location_of_tile:
+            elif '3' and 'C'.lower() in location_of_tile:
                 otrio_grid.insert(9, 'o')
         else:
             print("You truly are not worthy of this.")
