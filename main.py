@@ -99,13 +99,7 @@ def press_start(otrio_grid):
         print(Fore.MAGENTA + "Type what you want to do.")
         what_u_want_to_do = input(Fore.BLUE + "(Press Play)\n(Rules)\n(I Give Up)\n")
         if what_u_want_to_do == "(Press Play)":
-            choose_your_fight = input("Who do you wish to face:\nPLAYER 1 or PLAYER 2?")
-            if choose_your_fight == "PLAYER 1".lower():
-                print(otrio_grid)
-            elif choose_your_fight == "PLAYER 2".lower():
-                print(otrio_grid)
-            else:
-                print(Fore.YELLOW + "Don't make me laugh that is not a number you utter buffoon. ")
+            pass
         elif what_u_want_to_do == "(Rules)":
             os.system('cls')
             rules_call()
