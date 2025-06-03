@@ -41,25 +41,25 @@ def press_play(otrio_grid):
         location_of_tile = input("")
         if 'o' in location_of_tile:
             if '1' and 'A'.lower() in location_of_tile:
-                otrio_grid.append(1, 'o')
+                otrio_grid.insert(1, 'o')
             elif '2' and 'B'.lower() in location_of_tile:
-                otrio_grid.append(2, 'o')
+                otrio_grid.insert(2, 'o')
             elif '3' and 'B'.lower() in location_of_tile:
-                otrio_grid.append(3, 'o')
+                otrio_grid.insert(3, 'o')
         elif 'O' in location_of_tile:
             if '1' and 'A'.lower() in location_of_tile:
-                otrio_grid.append(4, 'o')
+                otrio_grid.insert(4, 'o')
             elif '2' and 'B'.lower() in location_of_tile:
-                otrio_grid.append(5, 'o')
+                otrio_grid.insert(5, 'o')
             elif '3' and 'B'.lower() in location_of_tile:
-                otrio_grid.append(6, 'o')
+                otrio_grid.insert(6, 'o')
         elif '0' in location_of_tile:
             if '1' and 'A'.lower() in location_of_tile:
-                otrio_grid.append(7, 'o')
+                otrio_grid.insert(7, 'o')
             elif '2' and 'B'.lower() in location_of_tile:
-                otrio_grid.append(8, 'o')
+                otrio_grid.insert(8, 'o')
             elif '3' and 'B'.lower() in location_of_tile:
-                otrio_grid.append(9, 'o')
+                otrio_grid.insert(9, 'o')
         else:
             print("You truly have failed this battle.")
     elif choose_your_fight == "PLAYER 2".lower():
@@ -67,25 +67,25 @@ def press_play(otrio_grid):
         location_of_tile = input("")
         if 'o' in location_of_tile:
             if '1' and 'A'.lower() in location_of_tile:
-                otrio_grid.append(1, 'o')
+                otrio_grid.insert(1, 'o')
             elif '2' and 'B'.lower() in location_of_tile:
-                otrio_grid.append(2, 'o')
+                otrio_grid.insert(2, 'o')
             elif '3' and 'B'.lower() in location_of_tile:
-                otrio_grid.append(3, 'o')
+                otrio_grid.insert(3, 'o')
         elif 'O' in location_of_tile:
             if '1' and 'A'.lower() in location_of_tile:
-                otrio_grid.append(4, 'o')
+                otrio_grid.insert(4, 'o')
             elif '2' and 'B'.lower() in location_of_tile:
-                otrio_grid.append(5, 'o')
+                otrio_grid.insert(5, 'o')
             elif '3' and 'B'.lower() in location_of_tile:
-                otrio_grid.append(6, 'o')
+                otrio_grid.insert(6, 'o')
         elif '0' in location_of_tile:
             if '1' and 'A'.lower() in location_of_tile:
-                otrio_grid.append(7, 'o')
+                otrio_grid.insert(7, 'o')
             elif '2' and 'B'.lower() in location_of_tile:
-                otrio_grid.append(8, 'o')
+                otrio_grid.insert(8, 'o')
             elif '3' and 'B'.lower() in location_of_tile:
-                otrio_grid.append(9, 'o')
+                otrio_grid.insert(9, 'o')
         else:
             print("You truly are not worthy of this.")
     else:
