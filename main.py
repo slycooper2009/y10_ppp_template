@@ -64,9 +64,11 @@ def press_play(otrio_grid):
             print("You truly have failed this battle.")
     elif choose_your_fight == "PLAYER 2".lower():
         print(otrio_grid)
-        location_of_tile = input("")
+        location_of_tile = input("").lower()
+        #
         if 'o' in location_of_tile:
-            if '1' in location_of_tile and 'A'.lower() in location_of_tile:
+            
+            if '1' in location_of_tile and 'a' in location_of_tile:
                 otrio_grid.insert(1, 'o')
             elif '2' and 'B'.lower() in location_of_tile:
                 otrio_grid.insert(2, 'o')
