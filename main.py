@@ -39,35 +39,27 @@ def press_play(otrio_grid):
     if choose_your_fight == "PLAYER 1":  # ALWAYS FALSE
         print(otrio_grid)
         location_of_tile = input("")
-
-        column, row, piece = location_of_tile
-        if piece == 'o':
-            if row == 'A':
-                if column == '1':
-                    pass
-        if 'o' in location_of_tile:
-            if '1' and 'A' in location_of_tile:
-                otrio_grid.insert(1, 'o')
-            elif '2' and 'B' in location_of_tile:
-                otrio_grid.insert(2, 'o')
-            elif '3' and 'B' in location_of_tile:
-                otrio_grid.insert(3, 'o')
-        elif 'O' in location_of_tile:
-            if '1' and 'A' in location_of_tile:
-                otrio_grid.insert(4, 'o')
-            elif '2' and 'B' in location_of_tile:
-                otrio_grid.insert(5, 'o')
-            elif '3' and 'B' in location_of_tile:
-                otrio_grid.insert(6, 'o')
-        elif '0' in location_of_tile:
-            if '1' and 'A' in location_of_tile:
-                otrio_grid.insert(7, 'o')
-            elif '2' and 'B' in location_of_tile:
-                otrio_grid.insert(8, 'o')
-            elif '3' and 'B' in location_of_tile:
-                otrio_grid.insert(9, 'o')
-        else:
-            print("You truly have failed this battle.")
+        i = 0
+        n = 1
+        for b in range(3):    
+            column, row, piece = location_of_tile
+            if piece == 'o':
+                if row == 'A':
+                    if column == '1':
+                        otrio_grid[i][n] = 'o'
+                    else:
+                        print("You truly have failed this battle.")
+                elif row == 'B':
+                    if column == '2':
+                        i += 1
+                        n += 1
+                        otrio_grid[i][n] = 'o'
+                        
+                    
+                    else:
+                        print("You truly have failed this battle.")
+            else:
+                print("You truly have failed this battle.")
     elif choose_your_fight == "PLAYER 2":
         print(otrio_grid)
         location_of_tile = input("").upper()
