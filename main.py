@@ -47,17 +47,43 @@ def press_play(otrio_grid):
                 if row == 'A':
                     if column == '1':
                         otrio_grid[i][n] = 'o'
+                    elif column == '2':
+                        n += 1
+                        otrio-grid[i][n] = 'o'
+                    elif column == '3':
+                        n += 2
+                        otrio_grid[i][n] = 'o'
                     else:
                         print("You truly have failed this battle.")
                 elif row == 'B':
-                    if column == '2':
+                    if column == '1':
                         i += 1
-                        n += 1
                         otrio_grid[i][n] = 'o'
-                        
-                    
+                    elif column == '2':
+                        i += 2
+                        n += 1
+                        otrio-grid[i][n] = 'o'
+                    elif column == '3':
+                        n += 2
+                        i += 3
+                        otrio_grid[i][n] = 'o'
                     else:
                         print("You truly have failed this battle.")
+                elif row == 'C':
+                    if column == '3':
+                        i += 1
+                        otrio_grid[i][n] = 'o'
+                    elif column == '2':
+                        i += 2
+                        n += 1
+                        otrio-grid[i][n] = 'o'
+                    elif column == '3':
+                        n += 2
+                        i += 3
+                        otrio_grid[i][n] = 'o'
+                    else:
+                        print("You truly have failed this battle.")
+                    
             else:
                 print("You truly have failed this battle.")
     elif choose_your_fight == "PLAYER 2":
