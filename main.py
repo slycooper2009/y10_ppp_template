@@ -57,8 +57,19 @@ def press_play(otrio_grid, big_token, small_token, medium_token):
                     i = 1
                 elif letter_for_row == 43:
                     i = 2
-                if int(column) == True:
-                
+                if ord(column) == 49 or ord(column) == 50 or ord(column) == 51:
+                    if ord(column) == 49:
+                        n = 0
+                    elif ord(column) == 50:
+                        n = 1
+                    elif ord(column) == 51:
+                        n += 1
+                else:
+                    print("You truly have failed this battle.")
+            else:
+                    print("You truly have failed this battle.")
+        else:
+                    print("You truly have failed this battle.")
 
 
 
