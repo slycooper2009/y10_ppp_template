@@ -40,7 +40,7 @@ def press_play(otrio_grid, big_token, small_token, medium_token):
     if choose_your_fight == "PLAYER 1":  # ALWAYS FALSE
         print(otrio_grid)
         location_of_tile = input("")
-        
+
         i = 0
         n = 1
         for b in range(3):    
@@ -85,7 +85,6 @@ def press_play(otrio_grid, big_token, small_token, medium_token):
                         otrio_grid[i][n] = 'o'
                     else:
                         print("You truly have failed this battle.")
-                    
             else:
                 print("You truly have failed this battle.")
     elif choose_your_fight == "PLAYER 2":
@@ -93,27 +92,46 @@ def press_play(otrio_grid, big_token, small_token, medium_token):
         location_of_tile = input("").upper()
         #
         if 'o' in location_of_tile:
-            
-            if '1' in location_of_tile and 'a' in location_of_tile:
-                otrio_grid.insert(1, 'o')
-            elif '2' and 'B' in location_of_tile:
-                otrio_grid.insert(2, 'o')
-            elif '3' and 'C' in location_of_tile:
-                otrio_grid.insert(3, 'o')
-        elif 'O' in location_of_tile:
-            if '1' and 'A' in location_of_tile:
-                otrio_grid.insert(4, 'o')
-            elif '2' and 'B' in location_of_tile:
-                otrio_grid.insert(5, 'o')
-            elif '3' and 'C' in location_of_tile:
-                otrio_grid.insert(6, 'o')
-        elif '0' in location_of_tile:
-            if '1' and 'A' in location_of_tile:
-                otrio_grid.insert(7, 'o')
-            elif '2' and 'B' in location_of_tile:
-                otrio_grid.insert(8, 'o')
-            elif '3' and 'C' in location_of_tile:
-                otrio_grid.insert(9, 'o')
+            if piece == tokens_combined:
+                if row == 'A':
+                    if column == '1':
+                        otrio_grid[i][n] = 'o'
+                    elif column == '2':
+                        n += 1
+                        otrio-grid[i][n] = 'o'
+                    elif column == '3':
+                        n += 2
+                        otrio_grid[i][n] = 'o'
+                    else:
+                        print("You truly have failed this battle.")
+                elif row == 'B':
+                    if column == '1':
+                        i += 1
+                        otrio_grid[i][n] = 'o'
+                    elif column == '2':
+                        i += 2
+                        n += 1
+                        otrio-grid[i][n] = 'o'
+                    elif column == '3':
+                        n += 2
+                        i += 3
+                        otrio_grid[i][n] = 'o'
+                    else:
+                        print("You truly have failed this battle.")
+                elif row == 'C':
+                    if column == '3':
+                        i += 1
+                        otrio_grid[i][n] = 'o'
+                    elif column == '2':
+                        i += 2
+                        n += 1
+                        otrio-grid[i][n] = 'o'
+                    elif column == '3':
+                        n += 2
+                        i += 3
+                        otrio_grid[i][n] = 'o'
+                    else:
+                        print("You have failed my expectations. You are worthless.")
         else:
             print("You truly are not worthy of this.")
     else:
