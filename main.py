@@ -40,6 +40,7 @@ def press_play(otrio_grid, big_token, small_token, medium_token):
     if choose_your_fight == "PLAYER 1":  # ALWAYS FALSE
         print(otrio_grid)
         location_of_tile = input("")
+        
         i = 0
         n = 1
         for b in range(3):    
