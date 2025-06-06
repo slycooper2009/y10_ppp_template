@@ -43,7 +43,7 @@ def press_play(otrio_grid):
         n = 1
         for b in range(3):    
             column, row, piece = location_of_tile
-            if piece == 'o':
+            if piece == 'o' or piece == 'O' or piece == '0':
                 if row == 'A':
                     if column == '1':
                         otrio_grid[i][n] = 'o'
