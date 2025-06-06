@@ -34,7 +34,8 @@ def rules_call():
           ,Fore.GREEN + "\nTo put something in the board you put the the number of the row, the letter of the row and the token you want to use \ni.e. 2B0")
     return rules_call
 
-def press_play(otrio_grid):
+def press_play(otrio_grid, big_token, small_token, medium_token):
+    tokens_combined = [big_token, small_token, medium_token]
     choose_your_fight = input("Who do you wish to face:\nPLAYER 1 or PLAYER 2?")
     if choose_your_fight == "PLAYER 1":  # ALWAYS FALSE
         print(otrio_grid)
@@ -43,7 +44,7 @@ def press_play(otrio_grid):
         n = 1
         for b in range(3):    
             column, row, piece = location_of_tile
-            if piece == 'o' or piece == 'O' or piece == '0':
+            if piece == tokens_combined:
                 if row == 'A':
                     if column == '1':
                         otrio_grid[i][n] = 'o'
