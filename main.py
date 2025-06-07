@@ -130,6 +130,33 @@ def press_play(otrio_grid, big_token, small_token, medium_token):
     elif choose_your_fight == "PLAYER 2":
         print(otrio_grid)
         location_of_tile = input("").upper()
+        i = 0
+        n = 1
+        
+        column, row, piece = location_of_tile
+        if piece in tokens_combined:
+            tokens_combined.remove(piece)
+            if row.alpha() == True:
+                letter_for_row = ord(row)
+                if letter_for_row == 41:
+                    i = 0
+                elif letter_for_row == 42:
+                    i = 1
+                elif letter_for_row == 43:
+                    i = 2
+                if ord(column) == 49 or ord(column) == 50 or ord(column) == 51:
+                    if ord(column) == 49:
+                        n = 0
+                    elif ord(column) == 50:
+                        n = 1
+                    elif ord(column) == 51:
+                        n += 1
+                else:
+                    print("You truly have failed this battle.")
+            else:
+                    print("You truly have failed this battle.")
+        else:
+                    print("You truly have failed this battle.")
         
         # if 'o' in location_of_tile:
         #     if piece == tokens_combined:
