@@ -1,4 +1,5 @@
 from colorama import Fore
+from time import clock
 import os
 from time import sleep
 #I found this online wanted to try it out
