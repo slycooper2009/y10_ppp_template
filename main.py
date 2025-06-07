@@ -126,10 +126,6 @@ def press_play(otrio_grid, big_token, small_token, medium_token):
         #                 n += 2
         #                 i += 3
         #                 otrio_grid[i][n] = 'o'
-                    else:
-                        print("You truly have failed this battle.")
-            else:
-                print("You truly have failed this battle.")
     elif choose_your_fight == "PLAYER 2":
         print(otrio_grid)
         location_of_tile = input("").upper()
@@ -173,12 +169,12 @@ def press_play(otrio_grid, big_token, small_token, medium_token):
         #                 n += 2
         #                 i += 3
         #                 otrio_grid[i][n] = 'o'
-                    else:
-                        print("You have failed my expectations. You are worthless.")
-        else:
-            print("You truly are not worthy of this.")
-    else:
-        print(Fore.YELLOW + "Don't make me laugh that is not a number you utter buffoon. ")
+         #           else:
+         #               print("You have failed my expectations. You are worthless.")
+       # else:
+            #print("You truly are not worthy of this.")
+#    else:
+ #       print(Fore.YELLOW + "Don't make me laugh that is not a number you utter buffoon. ")
 
 #play
 def press_start(otrio_grid):
