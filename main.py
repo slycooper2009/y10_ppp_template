@@ -102,11 +102,11 @@ def press_play(otrio_grid, big_token, small_token, medium_token):
                     elif ord(column) == 51:
                         n += 1
                 else:
-                    print("You truly have failed this battle.")
+                    print("You have failed my expectations. You are worthless.")
             else:
-                    print("You truly have failed this battle.")
+                    print("You have failed my expectations. You are worthless.")
         else:
-                    print("You truly have failed this battle.")
+                    print("You have failed my expectations. You are worthless.")
 
 #play
 def press_start(otrio_grid):
