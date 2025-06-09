@@ -39,8 +39,9 @@ def rules_call():
           ,Fore.GREEN + "\nTo put something in the board you put the the number of the row, the letter of the row and the token you want to use \ni.e. 2B0")
     return rules_call
 
-def player_one_opponent():
-     randint()
+def player_one_opponent(i, row, column, otrio_grid, big_token, small_token, medium_token):
+    ai_row = randint(1, 3)
+    ai_column = randint(1, 3)
 
 #What is used to play the game
 def press_play(otrio_grid, big_token, small_token, medium_token):
@@ -110,6 +111,7 @@ def press_play(otrio_grid, big_token, small_token, medium_token):
                     print("You have failed my expectations. You are worthless.")
         else:
                     print("You have failed my expectations. You are worthless.")
+    return row, column, piece, i, n
 
 #playing the game. where everything begins
 def press_start(otrio_grid):
