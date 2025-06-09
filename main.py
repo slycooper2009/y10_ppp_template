@@ -2,16 +2,16 @@ from colorama import Fore
 from time import clock
 import os
 from time import sleep
-#I found this online wanted to try it out
-#I understand how it works
 #Opening screen
 print(Fore.RED + "This is the Game that will bring your demise.")
 print(Fore.RED + "The Game where you dance with death.")
 sleep(5)
+#I want the playere to be able to read the previous string
 os.system('cls' if os.name == 'nt' else 'clear')
 print(Fore.RED + "WECLOME PLAYER TO OTRIO\n")
-#Grid List
+#This is my Grid List
 def grid():
+#I am using a 
     otrio_grid = [[' ', ' ', ' '],
                   [' ', ' ', ' '],
                   [' ', ' ', ' ']]
