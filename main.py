@@ -51,28 +51,29 @@ def rules_call():
     return rules_call
 
 def player_one_opponent(i, row, column, otrio_grid, ai_big_token, ai_small_token, ai_medium_token):
-    ai_row = randint(1, 3)
-    ai_column = randint(1, 3)
+    ai_row = randint(41, 43)
+    ai_column = randint(65, 67)
     tokens_combined = [ai_big_token, ai_small_token, ai_medium_token]
     ai_piece = randint(tokens_combined)
     if ai_piece in tokens_combined:
             tokens_combined.remove(ai_piece)
             if row.alpha() == True:
-                letter_for_row = ord(row)
+                letter_for_row = ord(ai_row)
                 if letter_for_row == 41:
                     i = 0
                 elif letter_for_row == 42:
                     i = 1
                 elif letter_for_row == 43:
                     i = 2
-                if ord(column) == 49 or ord(column) == 50 or ord(column) == 51:
-                    if ord(column) == 49:
+                if ord(ai_column) == 65 or ord(ai_column) == 66 or ord(ai_column) == 67:
+                    if ord(ai_column) == 65:
                         n = 0
+                    
                         otrio_grid.insert(ai_piece)
-                    elif ord(column) == 50:
+                    elif ord(ai_column) == 66:
                         n = 1
                         otrio_grid.insert(ai_piece)
-                    elif ord(column) == 51:
+                    elif ord(ai_column) == 67:
                         n += 1
                         otrio_grid.insert(ai_piece)
 
@@ -100,14 +101,14 @@ def press_play(otrio_grid, big_token, small_token, medium_token):
                     i = 1
                 elif letter_for_row == 43:
                     i = 2
-                if ord(column) == 49 or ord(column) == 50 or ord(column) == 51:
-                    if ord(column) == 49:
+                if ord(column) == 65 or ord(column) == 66 or ord(column) == 67:
+                    if ord(column) == 65:
                         n = 0
                         otrio_grid.insert(piece)
-                    elif ord(column) == 50:
+                    elif ord(column) == 66:
                         n = 1
                         otrio_grid.insert(piece)
-                    elif ord(column) == 51:
+                    elif ord(column) == 67:
                         n += 1
                         otrio_grid.insert(piece)
                 else:
@@ -134,12 +135,12 @@ def press_play(otrio_grid, big_token, small_token, medium_token):
                     i = 1
                 elif letter_for_row == 43:
                     i = 2
-                if ord(column) == 49 or ord(column) == 50 or ord(column) == 51:
-                    if ord(column) == 49:
+                if ord(column) == 65 or ord(column) == 66 or ord(column) == 67:
+                    if ord(column) == 65:
                         n = 0
-                    elif ord(column) == 50:
+                    elif ord(column) == 66:
                         n = 1
-                    elif ord(column) == 51:
+                    elif ord(column) == 67:
                         n += 1
                 else:
                     print("You have failed my expectations. You are worthless.")
