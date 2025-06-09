@@ -1,5 +1,6 @@
 from colorama import Fore
 from time import clock
+from random import randint
 import os
 from time import sleep
 #Opening screen
@@ -38,6 +39,9 @@ def rules_call():
           ,Fore.GREEN + "\nTo put something in the board you put the the number of the row, the letter of the row and the token you want to use \ni.e. 2B0")
     return rules_call
 
+def player_one_opponent():
+     randint()
+
 #What is used to play the game
 def press_play(otrio_grid, big_token, small_token, medium_token):
     tokens_combined = [big_token, small_token, medium_token]
@@ -50,7 +54,6 @@ def press_play(otrio_grid, big_token, small_token, medium_token):
         n = 1
         
         column, row, piece = location_of_tile
-
 
         #How the player can place a token
         if piece in tokens_combined:
@@ -76,7 +79,7 @@ def press_play(otrio_grid, big_token, small_token, medium_token):
                     print("You truly have failed this battle.")
         else:
                     print("You truly have failed this battle.")
-
+    #Player 2. Harder version of Otrio. Will have 3 rounds. First is automatic lose, second is difficult but can still win and final is a timed match.
     elif choose_your_fight == "PLAYER 2":
         print(otrio_grid)
         location_of_tile = input("").upper()
@@ -108,7 +111,7 @@ def press_play(otrio_grid, big_token, small_token, medium_token):
         else:
                     print("You have failed my expectations. You are worthless.")
 
-#play
+#playing the game. where everything begins
 def press_start(otrio_grid):
 
     game_end = False
