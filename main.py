@@ -11,7 +11,7 @@ os.system('cls' if os.name == 'nt' else 'clear')
 print(Fore.RED + "WECLOME PLAYER TO OTRIO\n")
 #This is my Grid List
 def grid():
-#I am using a 
+    #I am using a 3D list to make it the grid look more like a list, this is also because I need to only use one board making it easier to code
     otrio_grid = [[' ', ' ', ' '],
                   [' ', ' ', ' '],
                   [' ', ' ', ' ']]
@@ -19,13 +19,16 @@ def grid():
 
 #Player token list
 def reset_tokens(colour):
+    #Biggest Token
     big_token = [colour + "0", "0", "0"]
+    #Middle sized Token
     medium_token = [colour + "O", "O", "O"]
+    #Smallest Token
     small_token = [colour + "o", "o", "o"]
 
     return big_token, medium_token, small_token
 
-#rules
+#Rules of the game.
 def rules_call():
     print(Fore.BLUE + "These are the rules for otrio"
           ,Fore.GREEN + "\nYou and your opponent have three different tokens:" 
@@ -35,10 +38,12 @@ def rules_call():
           ,Fore.GREEN + "\nTo put something in the board you put the the number of the row, the letter of the row and the token you want to use \ni.e. 2B0")
     return rules_call
 
+#What is used to play the game
 def press_play(otrio_grid, big_token, small_token, medium_token):
     tokens_combined = [big_token, small_token, medium_token]
     choose_your_fight = input("Who do you wish to face:\nPLAYER 1 or PLAYER 2?")
-    if choose_your_fight == "PLAYER 1":  # ALWAYS FALSE
+    #Easier AI. I will make it choose a random square to place the token and a random token to use
+    if choose_your_fight == "PLAYER 1":
         print(otrio_grid)
         location_of_tile = input("").upper()
         i = 0
@@ -47,7 +52,7 @@ def press_play(otrio_grid, big_token, small_token, medium_token):
         column, row, piece = location_of_tile
 
 
-        # # check if the piece is valid
+        #How the player can place a token
         if piece in tokens_combined:
             tokens_combined.remove(piece)
             if row.alpha() == True:
