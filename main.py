@@ -77,7 +77,59 @@ def press_play(otrio_grid, big_token, small_token, medium_token):
         else:
                     print("You truly have failed this battle.")
 
+    elif choose_your_fight == "PLAYER 2":
+        print(otrio_grid)
+        location_of_tile = input("").upper()
+        i = 0
+        n = 1
+        
+        column, row, piece = location_of_tile
+        if piece in tokens_combined:
+            tokens_combined.remove(piece)
+            if row.alpha() == True:
+                letter_for_row = ord(row)
+                if letter_for_row == 41:
+                    i = 0
+                elif letter_for_row == 42:
+                    i = 1
+                elif letter_for_row == 43:
+                    i = 2
+                if ord(column) == 49 or ord(column) == 50 or ord(column) == 51:
+                    if ord(column) == 49:
+                        n = 0
+                    elif ord(column) == 50:
+                        n = 1
+                    elif ord(column) == 51:
+                        n += 1
+                else:
+                    print("You truly have failed this battle.")
+            else:
+                    print("You truly have failed this battle.")
+        else:
+                    print("You truly have failed this battle.")
 
+#play
+def press_start(otrio_grid):
+
+    game_end = False
+    while game_end != True:
+        print(Fore.MAGENTA + "Type what you want to do.")
+        what_u_want_to_do = input(Fore.BLUE + "(Press Play)\n(Rules)\n(I Give Up)\n")
+        if what_u_want_to_do == "(Press Play)":
+            pass
+        elif what_u_want_to_do == "(Rules)":
+            os.system('cls')
+            rules_call()
+        elif what_u_want_to_do == "(I Give Up)":
+            game_end = True
+
+press_start()
+
+
+big_token, medium_token, small_token = reset_tokens(Fore.BLUE)
+
+
+#Worthless line... Could be useful for later
 
         # # we know the piece if valid
 
@@ -132,38 +184,8 @@ def press_play(otrio_grid, big_token, small_token, medium_token):
         #                 n += 2
         #                 i += 3
         #                 otrio_grid[i][n] = 'o'
-    elif choose_your_fight == "PLAYER 2":
-        print(otrio_grid)
-        location_of_tile = input("").upper()
-        i = 0
-        n = 1
-        
-        column, row, piece = location_of_tile
-        if piece in tokens_combined:
-            tokens_combined.remove(piece)
-            if row.alpha() == True:
-                letter_for_row = ord(row)
-                if letter_for_row == 41:
-                    i = 0
-                elif letter_for_row == 42:
-                    i = 1
-                elif letter_for_row == 43:
-                    i = 2
-                if ord(column) == 49 or ord(column) == 50 or ord(column) == 51:
-                    if ord(column) == 49:
-                        n = 0
-                    elif ord(column) == 50:
-                        n = 1
-                    elif ord(column) == 51:
-                        n += 1
-                else:
-                    print("You truly have failed this battle.")
-            else:
-                    print("You truly have failed this battle.")
-        else:
-                    print("You truly have failed this battle.")
-        
-        # if 'o' in location_of_tile:
+
+                # if 'o' in location_of_tile:
         #     if piece == tokens_combined:
         #         if row == 'A':
         #             if column == '1':
@@ -208,23 +230,3 @@ def press_play(otrio_grid, big_token, small_token, medium_token):
             #print("You truly are not worthy of this.")
 #    else:
  #       print(Fore.YELLOW + "Don't make me laugh that is not a number you utter buffoon. ")
-
-#play
-def press_start(otrio_grid):
-
-    game_end = False
-    while game_end != True:
-        print(Fore.MAGENTA + "Type what you want to do.")
-        what_u_want_to_do = input(Fore.BLUE + "(Press Play)\n(Rules)\n(I Give Up)\n")
-        if what_u_want_to_do == "(Press Play)":
-            pass
-        elif what_u_want_to_do == "(Rules)":
-            os.system('cls')
-            rules_call()
-        elif what_u_want_to_do == "(I Give Up)":
-            game_end = True
-
-press_start()
-
-
-big_token, medium_token, small_token = reset_tokens(Fore.BLUE)
