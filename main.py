@@ -29,6 +29,17 @@ def reset_tokens(colour):
 
     return big_token, medium_token, small_token
 
+#player 1 ai tokens
+def ai_tokens(colour):
+    #Biggest Token
+    ai_big_token = [colour + "0", "0", "0"]
+    #Middle sized Token
+    ai_medium_token = [colour + "O", "O", "O"]
+    #Smallest Token
+    ai_small_token = [colour + "o", "o", "o"]
+
+    return ai_big_token, ai_medium_token, ai_small_token
+
 #Rules of the game.
 def rules_call():
     print(Fore.BLUE + "These are the rules for otrio"
@@ -39,9 +50,27 @@ def rules_call():
           ,Fore.GREEN + "\nTo put something in the board you put the the number of the row, the letter of the row and the token you want to use \ni.e. 2B0")
     return rules_call
 
-def player_one_opponent(i, row, column, otrio_grid, big_token, small_token, medium_token):
+def player_one_opponent(i, row, column, otrio_grid, ai_big_token, ai_small_token, ai_medium_token):
     ai_row = randint(1, 3)
     ai_column = randint(1, 3)
+    tokens_combined = [ai_big_token, ai_small_token, ai_medium_token]
+    if ai_piece in tokens_combined:
+            tokens_combined.remove(ai_piece)
+            if row.alpha() == True:
+                letter_for_row = ord(row)
+                if letter_for_row == 41:
+                    i = 0
+                elif letter_for_row == 42:
+                    i = 1
+                elif letter_for_row == 43:
+                    i = 2
+                if ord(column) == 49 or ord(column) == 50 or ord(column) == 51:
+                    if ord(column) == 49:
+                        n = 0
+                    elif ord(column) == 50:
+                        n = 1
+                    elif ord(column) == 51:
+                        n += 1
 
 #What is used to play the game
 def press_play(otrio_grid, big_token, small_token, medium_token):
