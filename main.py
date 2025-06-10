@@ -99,7 +99,7 @@ def press_play(otrio_grid, big_token, small_token, medium_token):
     choose_your_fight = input("Who do you wish to face: \nPLAYER 1 or PLAYER 2? ")
     #Easier AI. I will make it choose a random square to place the token and a random token to use
     if choose_your_fight == "PLAYER 1":
-        otrio_grid
+        print(grid())
         location_of_tile = input("")
         i = 0
         n = 1
