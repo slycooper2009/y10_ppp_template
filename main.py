@@ -12,9 +12,9 @@ os.system('cls' if os.name == 'nt' else 'clear')
 #This is my Grid List
 def grid():
     #I am using a 3D list to make it the grid look more like a board, this is also because I need to only use one board making it easier to code
-    otrio_grid = [[' ', ' ', ' '],
-                  [' ', ' ', ' '],
-                  [' ', ' ', ' ']]
+    otrio_grid = [['', '', ''],
+                  ['', '', ''],
+                  ['', '', '']]
     return otrio_grid
 
 #Player token list
@@ -100,7 +100,6 @@ def press_play(otrio_grid, big_token, small_token, medium_token):
     #Easier AI. I will make it choose a random square to place the token and a random token to use
     if choose_your_fight == "PLAYER 1":
         for line in grid():
-            otrio_grid.remove("'\x1b")
             print(otrio_grid)
         location_of_tile = input("")
         i = 0
