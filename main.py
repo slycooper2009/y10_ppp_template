@@ -1,5 +1,5 @@
 from colorama import Fore
-from time import clock
+#from time import clock
 from random import randint
 import os
 from time import sleep
@@ -50,6 +50,10 @@ def rules_call():
           ,Fore.GREEN + "\nTo put something in the board you put the the number of the row, the letter of the row and the token you want to use \ni.e. 2B0")
     return rules_call
 
+def token_order():
+    
+    pass
+
 def player_one_opponent(i, row, column, otrio_grid, ai_big_token, ai_small_token, ai_medium_token):
     ai_row = randint(41, 43)
     ai_column = randint(65, 67)
@@ -76,6 +80,8 @@ def player_one_opponent(i, row, column, otrio_grid, ai_big_token, ai_small_token
                     elif ord(ai_column) == 67:
                         n += 1
                         otrio_grid.insert(ai_piece)
+
+                    
 
 #What is used to play the game
 def press_play(otrio_grid, big_token, small_token, medium_token):
@@ -149,6 +155,8 @@ def press_play(otrio_grid, big_token, small_token, medium_token):
         else:
                     print("You have failed my expectations. You are worthless.")
     return row, column, piece, i, n
+
+press_play()
 
 #playing the game. where everything begins
 def press_start(otrio_grid):
