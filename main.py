@@ -192,7 +192,7 @@ def press_start(otrio_grid):
             rules_call()
         elif what_u_want_to_do == "(I Give Up)":
             game_end = True
-press_start()
+
 
 
 #Worthless line... Could be useful for later
