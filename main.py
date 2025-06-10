@@ -9,7 +9,6 @@ print(Fore.RED + "The Game where you dance with death.")
 sleep(5)
 #I want the playere to be able to read the previous string
 os.system('cls' if os.name == 'nt' else 'clear')
-print(Fore.RED + "WECLOME PLAYER TO OTRIO\n")
 #This is my Grid List
 def grid():
     #I am using a 3D list to make it the grid look more like a list, this is also because I need to only use one board making it easier to code
@@ -176,6 +175,7 @@ def press_start():
 
     game_end = False
     while game_end != True:
+        print(Fore.RED + "WECLOME PLAYER TO OTRIO\n")
         print(Fore.MAGENTA + "Type what you want to do.")
         what_u_want_to_do = input(Fore.BLUE + "P = (Press Play)\nR = (Rules)\nQ = (I Give Up)\n")
         if what_u_want_to_do == "P":
@@ -191,6 +191,7 @@ def press_start():
             game_end = True
         else:
             print("Seems you have failed simple instructions. Well then... Goodbye!")
+            sleep(3)
             os.system('cls' if os.name == 'nt' else 'clear')
             game_end = True
 
