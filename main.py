@@ -166,7 +166,7 @@ def press_start():
 
     game_end = False
     while game_end != True:
-        print(Fore.MAGENTA + "Type what you want to do.").upper()
+        print(Fore.MAGENTA + "Type what you want to do.")
         what_u_want_to_do = input(Fore.BLUE + "P = (Press Play)\nR = (Rules)\nQ = (I Give Up)\n")
         if what_u_want_to_do == "P":
             os.system('cls')
