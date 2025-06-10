@@ -156,9 +156,23 @@ def press_play(otrio_grid, big_token, small_token, medium_token):
                     print("You have failed my expectations. You are worthless.")
     return row, column, piece, i, n
 
-reset_tokens()
+big_token, small_token, medium_token = reset_tokens()
+otrio_grid = grid()
+press_play(big_token, small_token, medium_token, otrio_grid)
 
-press_play()
+# def my_function():
+     
+#      return x, y
+
+
+# def my_other_function(result1, result2):
+#      return answer
+
+# #calling a function
+# result1, result2 = my_function()
+# new_result = my_other_function(result1, result2)
+
+
 
 #playing the game. where everything begins
 def press_start(otrio_grid):
