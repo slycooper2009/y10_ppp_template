@@ -11,7 +11,7 @@ sleep(5)
 os.system('cls' if os.name == 'nt' else 'clear')
 #This is my Grid List
 def grid():
-    #I am using a 3D list to make it the grid look more like a list, this is also because I need to only use one board making it easier to code
+    #I am using a 3D list to make it the grid look more like a board, this is also because I need to only use one board making it easier to code
     otrio_grid = [[' ', ' ', ' '],
                   [' ', ' ', ' '],
                   [' ', ' ', ' ']]
