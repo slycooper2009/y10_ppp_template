@@ -169,7 +169,11 @@ def press_start():
         print(Fore.MAGENTA + "Type what you want to do.").upper()
         what_u_want_to_do = input(Fore.BLUE + "P = (Press Play)\nR = (Rules)\nQ = (I Give Up)\n")
         if what_u_want_to_do == "P":
-            pass
+            os.system('cls')
+            big_token, small_token, medium_token = reset_tokens()
+            otrio_grid = grid()
+            press_play(big_token, small_token, medium_token, otrio_grid)
+
         elif what_u_want_to_do == "R":
             os.system('cls')
             rules_call()
@@ -179,12 +183,9 @@ def press_start():
             print("Seems you have failed simple instructions. Well then... Goodbye!")
             os.system('cls')
             game_end = True
-rules_call()
-"""
-big_token, small_token, medium_token = reset_tokens()
-otrio_grid = grid()
-press_play(big_token, small_token, medium_token, otrio_grid)
-"""
+
+press_start()
+
 #Worthless line... Could be useful for later
 
 # def my_function():
