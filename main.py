@@ -51,6 +51,7 @@ def rules_call():
           ,Fore.CYAN + "\nTo select (Press Play) type into the terminal P\nIf you want to select (Rules) type into the terminal R\nIf you want to select (I Give Up) type into the terminal Q\nHowever if you wish to waste my time with nothing then I will just disqualify you.\nTo exit Rules press Q\n\nI wish you an unpleasant game! Bad Luck!")
     exit_rules = input("")
     if exit_rules == "Q":
+        os.system('cls' if os.name == 'nt' else 'clear')
         return rules_call
     else:
         os.system('cls' if os.name == 'nt' else 'clear')
