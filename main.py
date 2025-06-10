@@ -19,13 +19,13 @@ def grid():
     return otrio_grid
 
 #Player token list
-def reset_tokens(colour):
+def reset_tokens(Fore):
     #Biggest Token
-    big_token = [colour + "0", "0", "0"]
+    big_token = [Fore.WHITE + "0", "0", "0"]
     #Middle sized Token
-    medium_token = [colour + "O", "O", "O"]
+    medium_token = [Fore.BLUE + "O", "O", "O"]
     #Smallest Token
-    small_token = [colour + "o", "o", "o"]
+    small_token = [Fore.PINK + "o", "o", "o"]
 
     return big_token, medium_token, small_token
 
