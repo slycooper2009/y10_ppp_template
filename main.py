@@ -160,24 +160,6 @@ def press_play(otrio_grid, big_token, small_token, medium_token):
     if choose_your_fight == "PLAYER 1" or choose_your_fight == "PLAYER 2":
         return row, column, piece, i, n
 
-big_token, small_token, medium_token = reset_tokens()
-otrio_grid = grid()
-press_play(big_token, small_token, medium_token, otrio_grid)
-
-# def my_function():
-     
-#      return x, y
-
-
-# def my_other_function(result1, result2):
-#      return answer
-
-# #calling a function
-# result1, result2 = my_function()
-# new_result = my_other_function(result1, result2)
-
-
-
 #playing the game. where everything begins
 def press_start(otrio_grid):
 
@@ -193,9 +175,24 @@ def press_start(otrio_grid):
         elif what_u_want_to_do == "(I Give Up)":
             game_end = True
 
-
+big_token, small_token, medium_token = reset_tokens()
+otrio_grid = grid()
+press_play(big_token, small_token, medium_token, otrio_grid)
 
 #Worthless line... Could be useful for later
+
+# def my_function():
+     
+#      return x, y
+
+
+# def my_other_function(result1, result2):
+#      return answer
+
+# #calling a function
+# result1, result2 = my_function()
+# new_result = my_other_function(result1, result2)
+
 
         # # we know the piece if valid
 
