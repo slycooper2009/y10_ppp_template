@@ -86,11 +86,11 @@ def player_one_opponent(i, row, column, otrio_grid, ai_big_token, ai_small_token
 #What is used to play the game
 def press_play(otrio_grid, big_token, small_token, medium_token):
     tokens_combined = [big_token, small_token, medium_token]
-    choose_your_fight = input("Who do you wish to face:\nPLAYER 1 or PLAYER 2?").upper()
+    choose_your_fight = input("Who do you wish to face:\nPLAYER 1 or PLAYER 2?")
     #Easier AI. I will make it choose a random square to place the token and a random token to use
     if choose_your_fight == "PLAYER 1":
         print(otrio_grid)
-        location_of_tile = input("").upper()
+        location_of_tile = input("")
         i = 0
         n = 1
         
