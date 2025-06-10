@@ -47,7 +47,8 @@ def rules_call():
           ,Fore.WHITE + "\n'o' , 'O' and '0'"
           ,Fore.GREEN + "\nThe 'o' token is the smallest of the three tokens it can be overlapped by 'O' and '0' however this token is very effective to map out your strategy.\nThe 'O' token is medium sized it can overlap the 'o' token however it can be overlapped by the'0' token.\nFinally the '0' token is the biggest of the three and can overlap any token."
           ,Fore.MAGENTA + "\nThe board looks like this:\n   1    2    3\nA ' '  ' '  ' '\nB ' '  ' '  ' '\nC ' '  ' '  ' '"
-          ,Fore.GREEN + "\nTo put something in the board you put the the number of the row, the letter of the row and the token you want to use \ni.e. 2B0")
+          ,Fore.GREEN + "\nTo put something in the board you put the the number of the row, the letter of the row and the token you want to use \ni.e. 2B0"
+          ,Fore.CYAN + "\nTo select (Press Play) type into the terminal P\nIf you want to select (Rules) type into the terminal R\nIf you want to select (I Give Up) type into the terminal Q\nHowever if you wish to waste my time with nothing then I will just disqualify you.\n\nI wish you a pleasant game! Bad Luck!")
     return rules_call
 
 def token_order():
@@ -161,24 +162,29 @@ def press_play(otrio_grid, big_token, small_token, medium_token):
         return row, column, piece, i, n
 
 #playing the game. where everything begins
-def press_start(otrio_grid):
+def press_start():
 
     game_end = False
     while game_end != True:
-        print(Fore.MAGENTA + "Type what you want to do.")
-        what_u_want_to_do = input(Fore.BLUE + "(Press Play)\n(Rules)\n(I Give Up)\n")
-        if what_u_want_to_do == "(Press Play)":
+        print(Fore.MAGENTA + "Type what you want to do.").upper()
+        what_u_want_to_do = input(Fore.BLUE + "P = (Press Play)\nR = (Rules)\nQ = (I Give Up)\n")
+        if what_u_want_to_do == "P":
             pass
-        elif what_u_want_to_do == "(Rules)":
+        elif what_u_want_to_do == "R":
             os.system('cls')
             rules_call()
-        elif what_u_want_to_do == "(I Give Up)":
+        elif what_u_want_to_do == "Q":
             game_end = True
-
+        else:
+            print("Seems you have failed simple instructions. Well then... Goodbye!")
+            os.system('cls')
+            game_end = True
+rules_call()
+"""
 big_token, small_token, medium_token = reset_tokens()
 otrio_grid = grid()
 press_play(big_token, small_token, medium_token, otrio_grid)
-
+"""
 #Worthless line... Could be useful for later
 
 # def my_function():
