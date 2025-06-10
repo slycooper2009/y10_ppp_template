@@ -57,6 +57,8 @@ def rules_call():
         print("Welp... I gues your stuck here now. Bye!")
         sleep(3)
         os.system('cls' if os.name == 'nt' else 'clear')
+        while exit_rules != "Q":
+            print("")
 
 def token_order():
     
