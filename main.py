@@ -91,7 +91,8 @@ def player_one_opponent(i, row, column, otrio_grid, ai_big_token, ai_small_token
                         n += 1
                         otrio_grid.insert(ai_piece)
 
-                    
+for line in grid():
+    print(grid)          
 
 #What is used to play the game
 def press_play(otrio_grid, big_token, small_token, medium_token):
