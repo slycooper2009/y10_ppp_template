@@ -157,9 +157,11 @@ def press_play(otrio_grid, big_token, small_token, medium_token):
                     print("You have failed my expectations. You are worthless.")
     else:
         print("Seems you are not even worthy of begining.")
-    if row.alpha() == True:
-        if ord(column) == 65 or ord(column) == 66 or ord(column) == 67:
-            return row, column, piece, i, n
+        if row.alpha() == True:
+            if ord(column) == 65 or ord(column) == 66 or ord(column) == 67:
+                return row, column, piece, i, n
+    if choose_your_fight == "PLAYER 1" or choose_your_fight == "PLAYER 2":
+        return row, column, piece, i, n
 
 big_token, small_token, medium_token = reset_tokens()
 otrio_grid = grid()
