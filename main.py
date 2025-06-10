@@ -19,13 +19,13 @@ def grid():
     return otrio_grid
 
 #Player token list
-def reset_tokens(Fore):
+def reset_tokens():
     #Biggest Token
     big_token = [Fore.WHITE + "0", "0", "0"]
     #Middle sized Token
     medium_token = [Fore.BLUE + "O", "O", "O"]
     #Smallest Token
-    small_token = [Fore.PINK + "o", "o", "o"]
+    small_token = [Fore.MAGENTA + "o", "o", "o"]
 
     return big_token, medium_token, small_token
 
@@ -156,7 +156,7 @@ def press_play(otrio_grid, big_token, small_token, medium_token):
                     print("You have failed my expectations. You are worthless.")
     return row, column, piece, i, n
 
-print(reset_tokens())
+reset_tokens()
 
 press_play()
 
