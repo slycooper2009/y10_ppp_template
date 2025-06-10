@@ -156,7 +156,7 @@ def press_play(otrio_grid, big_token, small_token, medium_token):
         else:
                     print("You have failed my expectations. You are worthless.")
     else:
-        print("You truly have failed this battle.")
+        print("Seems you are not even worthy of begining.")
     if row.alpha() == True:
         if ord(column) == 65 or ord(column) == 66 or ord(column) == 67:
             return row, column, piece, i, n
