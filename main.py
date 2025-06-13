@@ -114,10 +114,13 @@ def press_play(otrio_grid, big_token, small_token, medium_token):
                 letter_for_row = ord(row)
                 if letter_for_row == 41:
                     i = 0
+                    print("1")
                 elif letter_for_row == 42:
                     i = 1
+                    print("2")
                 elif letter_for_row == 43:
                     i = 2
+                    print("3")
                 if ord(column) == 65 or ord(column) == 66 or ord(column) == 67:
                     if ord(column) == 65:
                         n = 0
