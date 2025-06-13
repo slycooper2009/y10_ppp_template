@@ -110,28 +110,25 @@ def press_play(otrio_grid, big_token, small_token, medium_token):
         #How the player can place a token
         if piece in tokens_combined:
             tokens_combined.remove(piece)
-            if row == "A" or row == "B" or row == "C":
-                print("y")
-                letter_for_row = ord(row)
-                if letter_for_row == 41:
-                    i = 0
-                    print("1")
-                elif letter_for_row == 42:
-                    i = 1
-                    print("2")
-                elif letter_for_row == 43:
-                    i = 2
-                    print("3")
-                if ord(column) == 65 or ord(column) == 66 or ord(column) == 67:
-                    if ord(column) == 65:
-                        n = 0
-                        otrio_grid.insert(piece)
-                    elif ord(column) == 66:
-                        n = 1
-                        otrio_grid.insert(piece)
-                    elif ord(column) == 67:
-                        n += 1
-                        otrio_grid.insert(piece)
+            if row == "A":
+                i = 0
+                print("1")
+            elif row == "B":
+                 i = 1
+                 print("2")
+            elif row == "C":
+                i = 2
+                print("3")
+            if ord(column) == 65 or ord(column) == 66 or ord(column) == 67:
+                if ord(column) == 65:
+                    n = 0
+                    otrio_grid.insert(piece)
+                elif ord(column) == 66:
+                    n = 1
+                    otrio_grid.insert(piece)
+                elif ord(column) == 67:
+                    n += 1
+                    otrio_grid.insert(piece)
                 else:
                     print("1You truly have failed this battle.")
             else:
