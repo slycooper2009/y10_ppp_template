@@ -109,6 +109,7 @@ def press_play(otrio_grid, big_token, small_token, medium_token):
 
         #How the player can place a token
         if piece in tokens_combined:
+            print("Y")
             tokens_combined.remove(piece)
             if row == "A":
                 i = 0
