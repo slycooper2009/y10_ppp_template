@@ -108,7 +108,7 @@ def press_play(otrio_grid, big_token, small_token, medium_token):
         column, row, piece = location_of_tile
 
         #How the player can place a token
-        if piece in tokens_combined:
+        if tokens_combined in piece:
             print("bob1")
             tokens_combined.remove(piece)
             if row == "A" or row == "B" or row == "C":
