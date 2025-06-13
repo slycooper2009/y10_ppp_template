@@ -94,7 +94,6 @@ def player_one_opponent(i, row, column, otrio_grid, ai_big_token, ai_small_token
 
 #What is used to play the game
 def press_play(otrio_grid, big_token, small_token, medium_token):
-    print("bob1")
     tokens_combined = [big_token, small_token, medium_token]
     # show_grid = grid()
     choose_your_fight = input("Who do you wish to face: \nPLAYER 1 or PLAYER 2? ")
@@ -110,6 +109,7 @@ def press_play(otrio_grid, big_token, small_token, medium_token):
 
         #How the player can place a token
         if piece in tokens_combined:
+            print("bob1")
             tokens_combined.remove(piece)
             if row == "A" or row == "B" or row == "C":
                 letter_for_row = ord(row)
