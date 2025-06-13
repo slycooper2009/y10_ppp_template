@@ -100,7 +100,7 @@ def press_play(otrio_grid, big_token, small_token, medium_token):
     #Easier AI. I will make it choose a random square to place the token and a random token to use
     if choose_your_fight == "PLAYER 1":
         for line in grid():
-            print(otrio_grid)
+            print(line)
         location_of_tile = input("")
         i = 0
         n = 1
