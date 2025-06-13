@@ -132,11 +132,11 @@ def press_play(otrio_grid, big_token, small_token, medium_token):
                         n += 1
                         otrio_grid.insert(piece)
                 else:
-                    print("You truly have failed this battle.")
+                    print("1You truly have failed this battle.")
             else:
-                print("You truly have failed this battle.")
+                print("2You truly have failed this battle.")
         else:
-            print("You truly have failed this battle.")
+            print("3You truly have failed this battle.")
 
     #Player 2. Harder version of Otrio. Will have 3 rounds. First is automatic lose, second is difficult but can still win and final is a timed match.
     elif choose_your_fight == "PLAYER 2":
