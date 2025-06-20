@@ -73,7 +73,7 @@ def player_one_opponent(i,n, otrio_grid, ai_big_token, ai_small_token, ai_medium
     ai_i = 0
     ai_n = 0
     try_again = False
-    while try_again is False:
+    while try_again == False:
         if ai_piece in ai_tokens_combined:
             ai_tokens_combined.remove(ai_piece)
             letter_for_row = ai_row
