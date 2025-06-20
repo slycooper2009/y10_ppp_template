@@ -93,6 +93,7 @@ def player_one_opponent(i,n, otrio_grid, ai_big_token, ai_small_token, ai_medium
         if ai_i != i:
             if ai_n != n:
                 otrio_grid[i][n] = ai_piece
+                print(otrio_grid)
                 try_again = True
 
 #What is used to play the game
