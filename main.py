@@ -84,11 +84,11 @@ def player_one_opponent(i,n, otrio_grid, ai_big_token, ai_small_token, ai_medium
             elif letter_for_row == 43:
                 ai_i = 2
             if ai_column == 65 or ai_column == 66 or ai_column == 67:
-                if ord(ai_column) == 65:
+                if ai_column == 65:
                     ai_n = 0
-                elif ord(ai_column) == 66:
+                elif ai_column == 66:
                     ai_n = 1
-                elif ord(ai_column) == 67:
+                elif ai_column == 67:
                     ai_n += 1
         if ai_i != i:
             if ai_n != n:
