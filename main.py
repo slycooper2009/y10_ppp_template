@@ -1,6 +1,6 @@
 from colorama import Fore
 #from time import clock
-from random import randint
+from random import randint, choice
 import os
 from time import sleep
 #Opening screen
@@ -12,30 +12,30 @@ os.system('cls' if os.name == 'nt' else 'clear')
 #This is my Grid List
 def grid():
     #I am using a 3D list to make it the grid look more like a board, this is also because I need to only use one board making it easier to code
-    otrio_grid = [['', '', ''],
-                  ['', '', ''],
-                  ['', '', '']]
+    otrio_grid = [[' ', ' ', ' '],
+                  [' ', ' ', ' '],
+                  [' ', ' ', ' ']]
     return otrio_grid
 
 #Player token list
 def reset_tokens():
     #Biggest Token
-    big_token = [Fore.WHITE + "0", "0", "0"]
+    big_token = ["0", "0", "0"]
     #Middle sized Token
-    medium_token = [Fore.BLUE + "O", "O", "O"]
+    medium_token = ["O", "O", "O"]
     #Smallest Token
-    small_token = [Fore.MAGENTA + "o", "o", "o"]
+    small_token = ["o", "o", "o"]
 
     return big_token, medium_token, small_token
 
 #player 1 ai tokens
-def ai_tokens(colour):
+def ai_tokens():
     #Biggest Token
-    ai_big_token = [colour + "0", "0", "0"]
+    ai_big_token = ["0", "0", "0"]
     #Middle sized Token
-    ai_medium_token = [colour + "O", "O", "O"]
+    ai_medium_token = ["O", "O", "O"]
     #Smallest Token
-    ai_small_token = [colour + "o", "o", "o"]
+    ai_small_token = ["o", "o", "o"]
 
     return ai_big_token, ai_medium_token, ai_small_token
 
@@ -60,42 +60,48 @@ def rules_call():
         while exit_rules != "Q":
             print("")
 
-def token_order():
-    
+def token_order(i, n, otrio_grid):
+    #If there is already the biggest piece then tell the player to do it again
+
     pass
 
-def player_one_opponent(i, row, column, otrio_grid, ai_big_token, ai_small_token, ai_medium_token):
+def player_one_opponent(i,n, otrio_grid, ai_big_token, ai_small_token, ai_medium_token):
     ai_row = randint(41, 43)
     ai_column = randint(65, 67)
-    tokens_combined = [ai_big_token, ai_small_token, ai_medium_token]
-    ai_piece = randint(tokens_combined)
-    if ai_piece in tokens_combined:
-            tokens_combined.remove(ai_piece)
-            if row.alpha() == True:
-                letter_for_row = ord(ai_row)
-                if letter_for_row == 41:
-                    i = 0
-                elif letter_for_row == 42:
-                    i = 1
-                elif letter_for_row == 43:
-                    i = 2
-                if ord(ai_column) == 65 or ord(ai_column) == 66 or ord(ai_column) == 67:
-                    if ord(ai_column) == 65:
-                        n = 0
-                    
-                        otrio_grid.insert(ai_piece)
-                    elif ord(ai_column) == 66:
-                        n = 1
-                        otrio_grid.insert(ai_piece)
-                    elif ord(ai_column) == 67:
-                        n += 1
-                        otrio_grid.insert(ai_piece)
-
+    ai_tokens_combined = [ai_big_token, ai_small_token, ai_medium_token]
+    ai_piece = choice(ai_tokens_combined)
+    ai_i = 0
+    ai_n = 0
+    try_again = False
+    while try_again is False:
+        if ai_piece in ai_tokens_combined:
+            ai_tokens_combined.remove(ai_piece)
+            letter_for_row = ai_row
+            if letter_for_row == 41:
+                ai_i = 0
+            elif letter_for_row == 42:
+                ai_i = 1
+            elif letter_for_row == 43:
+                ai_i = 2
+            if ai_column == 65 or ai_column == 66 or ai_column == 67:
+                if ord(ai_column) == 65:
+                    ai_n = 0
+                elif ord(ai_column) == 66:
+                    ai_n = 1
+                elif ord(ai_column) == 67:
+                    ai_n += 1
+        if ai_i != i:
+            if ai_n != n:
+                otrio_grid[i][n] = ai_piece
+                try_again = True
 
 #What is used to play the game
-def press_play(otrio_grid, big_token, small_token, medium_token):
+def press_play(big_token, small_token, medium_token, otrio_grid):
+    #print(big_token)
     tokens_combined = big_token + small_token + medium_token
     # show_grid = grid()
+    # Making the player grid equal otrio grid
+    player_otrio_grid = otrio_grid
     choose_your_fight = input("Who do you wish to face: \nPLAYER 1 or PLAYER 2? ")
     #Easier AI. I will make it choose a random square to place the token and a random token to use
     if choose_your_fight == "PLAYER 1":
@@ -104,39 +110,38 @@ def press_play(otrio_grid, big_token, small_token, medium_token):
         location_of_tile = input("")
         i = 0
         n = 1
-        
-        column, row, piece = location_of_tile
 
+        column, row, piece = location_of_tile
+        
         #How the player can place a token
         if piece in tokens_combined:
-            print("Y")
+            #print("Y")
             tokens_combined.remove(piece)
+            #print("Y")
             if row == "A":
                 i = 0
                 print("1")
             elif row == "B":
-                 i = 1
-                 print("2")
+                i = 1
+                print("2")
             elif row == "C":
                 i = 2
                 print("3")
-            if ord(column) == 65 or ord(column) == 66 or ord(column) == 67:
-                if ord(column) == 65:
+            if ord(column) == 49 or ord(column) == 50 or ord(column) == 51:
+                if ord(column) == 49:
                     n = 0
-                    otrio_grid.insert(piece)
-                elif ord(column) == 66:
+                elif ord(column) == 50:
                     n = 1
-                    otrio_grid.insert(piece)
-                elif ord(column) == 67:
+                elif ord(column) == 51:
                     n += 1
-                    otrio_grid.insert(piece)
                 else:
                     print("1You truly have failed this battle.")
             else:
                 print("2You truly have failed this battle.")
         else:
             print("3You truly have failed this battle.")
-
+        player_otrio_grid[i][n] = piece
+        print(otrio_grid)
     #Player 2. Harder version of Otrio. Will have 3 rounds. First is automatic lose, second is difficult but can still win and final is a timed match.
     elif choose_your_fight == "PLAYER 2":
         print(otrio_grid)
@@ -171,11 +176,10 @@ def press_play(otrio_grid, big_token, small_token, medium_token):
     else:
         print("Seems you are not even worthy of begining.")
     if choose_your_fight == "PLAYER 1" or choose_your_fight == "PLAYER 2":
-        return row, column, piece, i, n
+        return row, column, piece, i, n, otrio_grid, player_otrio_grid
 
 #playing the game. where everything begins
 def press_start():
-
     game_end = False
     while game_end != True:
         print(Fore.RED + "WECLOME PLAYER TO OTRIO\n")
@@ -184,9 +188,13 @@ def press_start():
         if what_u_want_to_do == "P":
             os.system('cls' if os.name == 'nt' else 'clear')
             big_token, small_token, medium_token = reset_tokens()
+            #print('in press_start')
+            #print(big_token)
             otrio_grid = grid()
-            press_play(big_token, small_token, medium_token, otrio_grid)
-
+            row, column, piece, i, n, otrio_grid, player_otrio_grid = press_play(big_token, small_token, medium_token, otrio_grid)
+            token_order(i, n, otrio_grid)
+            ai_big_token, ai_medium_token, ai_small_token = ai_tokens()
+            player_one_opponent(i,n, otrio_grid, ai_big_token, ai_small_token, ai_medium_token)
         elif what_u_want_to_do == "R":
             os.system('cls' if os.name == 'nt' else 'clear')
             rules_call()
