@@ -10,6 +10,10 @@ sleep(5)
 #I want the playere to be able to read the previous string
 os.system('cls' if os.name == 'nt' else 'clear')
 #This is my Grid List
+otrio_inserts = [['','',''],['','',''],['','','']]
+
+
+
 def grid():
     #I am using a 3D list to make it the grid look more like a board, this is also because I need to only use one board making it easier to code
     otrio_grid = [[' ', ' ', ' '],
@@ -62,18 +66,18 @@ def rules_call():
 
 def token_order(i, n, otrio_grid):
     #If there is already the biggest piece then tell the player to do it again
-
     pass
 
 def player_one_opponent(i,n, otrio_grid, ai_big_token, ai_small_token, ai_medium_token):
-    ai_row = randint(41, 43)
-    ai_column = randint(65, 67)
-    ai_tokens_combined = [ai_big_token, ai_small_token, ai_medium_token]
-    ai_piece = choice(ai_tokens_combined)
-    ai_i = 0
-    ai_n = 0
     try_again = False
     while try_again == False:
+        ai_row = randint(41, 43)
+        num = 0
+        ai_column = randint(65, 67)
+        ai_tokens_combined = [ai_big_token[num], ai_small_token[num], ai_medium_token[num]]
+        ai_piece = choice(ai_tokens_combined)
+        ai_i = 0
+        ai_n = 0
         if ai_piece in ai_tokens_combined:
             ai_tokens_combined.remove(ai_piece)
             letter_for_row = ai_row
@@ -90,11 +94,57 @@ def player_one_opponent(i,n, otrio_grid, ai_big_token, ai_small_token, ai_medium
                     ai_n = 1
                 elif ai_column == 67:
                     ai_n += 1
+        num += 1
+        if ai_i != i:
+            if ai_n != n:
+                otrio_grid[ai_i][ai_n] = ai_piece
+                print("=======")
+                for line in otrio_grid:
+                    print(line)
+                print(ai_i, ai_n)
+                print("========")
+                otrio_inserts[ai_i][ai_n] = "Ai 1"
+                try_again = True
+
+
+def opponent_two_horrible(i, n, otrio_grid, ai_big_token, ai_small_token, ai_medium_token):
+    try_again = False
+    while try_again == False:
+        ai_row = randint(41, 43)
+        num = 0
+        ai_column = randint(65, 67)
+        ai_tokens_combined = [ai_big_token[num], ai_small_token[num], ai_medium_token[num]]
+        ai_piece = choice(ai_tokens_combined)
+        print("======")
+        print(ai_tokens_combined)
+        print("======")
+        ai_i = 0
+        ai_n = 0
+        if ai_piece in ai_tokens_combined:
+            ai_tokens_combined.remove(ai_piece)
+            letter_for_row = ai_row
+            if letter_for_row == 41:
+                ai_i = 0
+            elif letter_for_row == 42:
+                ai_i = 1
+            elif letter_for_row == 43:
+                ai_i = 2
+            if ai_column == 65 or ai_column == 66 or ai_column == 67:
+                if ai_column == 65:
+                    ai_n = 0
+                elif ai_column == 66:
+                    ai_n = 1
+                elif ai_column == 67:
+                    ai_n += 1
+        num += 1
         if ai_i != i:
             if ai_n != n:
                 otrio_grid[i][n] = ai_piece
-                print(otrio_grid)
+                print("=======")
+                for line in otrio_grid:
+                    print(line)
                 try_again = True
+
 
 #What is used to play the game
 def press_play(big_token, small_token, medium_token, otrio_grid):
@@ -121,20 +171,17 @@ def press_play(big_token, small_token, medium_token, otrio_grid):
             #print("Y")
             if row == "A":
                 i = 0
-                print("1")
             elif row == "B":
                 i = 1
-                print("2")
             elif row == "C":
                 i = 2
-                print("3")
             if ord(column) == 49 or ord(column) == 50 or ord(column) == 51:
                 if ord(column) == 49:
                     n = 0
                 elif ord(column) == 50:
                     n = 1
                 elif ord(column) == 51:
-                    n += 1
+                    n = 2
                 else:
                     print("1You truly have failed this battle.")
             else:
@@ -142,7 +189,9 @@ def press_play(big_token, small_token, medium_token, otrio_grid):
         else:
             print("3You truly have failed this battle.")
         player_otrio_grid[i][n] = piece
-        print(otrio_grid)
+        otrio_inserts[i][n] = "Player"
+        for line in player_otrio_grid:
+            print(line)
     #Player 2. Harder version of Otrio. Will have 3 rounds. First is automatic lose, second is difficult but can still win and final is a timed match.
     elif choose_your_fight == "PLAYER 2":
         print(otrio_grid)
@@ -178,6 +227,16 @@ def press_play(big_token, small_token, medium_token, otrio_grid):
         print("Seems you are not even worthy of begining.")
     if choose_your_fight == "PLAYER 1" or choose_your_fight == "PLAYER 2":
         return row, column, piece, i, n, otrio_grid, player_otrio_grid
+    else:
+        return otrio_grid
+
+def winner_winner_chicken_dinner(otrio_inserts):
+    for i in range(3):
+        #check if they are small tokens
+        #check medium tokens
+        #check big tokens
+        #check if they are the players or the Ai's tokens 
+        pass
 
 #playing the game. where everything begins
 def press_start():
