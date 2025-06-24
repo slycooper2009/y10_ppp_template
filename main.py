@@ -248,8 +248,6 @@ def press_start():
         if what_u_want_to_do == "P":
             os.system('cls' if os.name == 'nt' else 'clear')
             big_token, small_token, medium_token = reset_tokens()
-            #print('in press_start')
-            #print(big_token)
             otrio_grid = grid()
             row, column, piece, i, n, otrio_grid, player_otrio_grid = press_play(big_token, small_token, medium_token, otrio_grid)
             token_order(i, n, otrio_grid)
@@ -462,3 +460,5 @@ press_start()
 #                 for line in otrio_grid:
 #                     print(line)
 #                 try_again = True
+#print('in press_start')
+            #print(big_token)
