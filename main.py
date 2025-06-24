@@ -64,10 +64,6 @@ def rules_call():
         while exit_rules != "Q":
             print("")
 
-def token_order(i, n, otrio_grid):
-    #If there is already the biggest piece then tell the player to do it again
-    pass
-
 def player_one_opponent(i,n, otrio_grid, ai_big_token, ai_small_token, ai_medium_token):
     try_again = False
     while try_again == False:
@@ -250,7 +246,6 @@ def press_start():
             big_token, small_token, medium_token = reset_tokens()
             otrio_grid = grid()
             row, column, piece, i, n, otrio_grid, player_otrio_grid = press_play(big_token, small_token, medium_token, otrio_grid)
-            token_order(i, n, otrio_grid)
             ai_big_token, ai_medium_token, ai_small_token = ai_tokens()
             player_one_opponent(i,n, otrio_grid, ai_big_token, ai_small_token, ai_medium_token)
         elif what_u_want_to_do == "R":
@@ -491,5 +486,8 @@ press_start()
 #                     print("You have failed my expectations. You are worthless.")
 #         else:
 #                     print("You have failed my expectations. You are worthless.")
-# show_grid = grid()
-# def winner_winner_chicken_dinner(otrio_inserts):
+# # show_grid = grid()
+# # def winner_winner_chicken_dinner(otrio_inserts):
+# def token_order(i, n, otrio_grid):
+#     #If there is already the biggest piece then tell the player to do it again
+#     pass
