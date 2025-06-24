@@ -150,7 +150,7 @@ def opponent_two_horrible(i, n, otrio_grid, ai_big_token, ai_small_token, ai_med
 def press_play(big_token, small_token, medium_token, otrio_grid):
     #print(big_token)
     tokens_combined = big_token + small_token + medium_token
-    # show_grid = grid()
+    
     # Making the player grid equal otrio grid
     player_otrio_grid = otrio_grid
     choose_your_fight = input("Who do you wish to face: \nPLAYER 1 or PLAYER 2? ")
@@ -462,3 +462,33 @@ press_start()
 #                 try_again = True
 #print('in press_start')
             #print(big_token)
+# print(otrio_grid)
+#         location_of_tile = input("").upper()
+#         i = 0
+#         n = 1
+        
+#         column, row, piece = location_of_tile
+#         if piece in tokens_combined:
+#             tokens_combined.remove(piece)
+#             if row.alpha() == True:
+#                 letter_for_row = ord(row)
+#                 if letter_for_row == 41:
+#                     i = 0
+#                 elif letter_for_row == 42:
+#                     i = 1
+#                 elif letter_for_row == 43:
+#                     i = 2
+#                 if ord(column) == 65 or ord(column) == 66 or ord(column) == 67:
+#                     if ord(column) == 65:
+#                         n = 0
+#                     elif ord(column) == 66:
+#                         n = 1
+#                     elif ord(column) == 67:
+#                         n += 1
+#                 else:
+#                     print("You have failed my expectations. You are worthless.")
+#             else:
+#                     print("You have failed my expectations. You are worthless.")
+#         else:
+#                     print("You have failed my expectations. You are worthless.")
+# show_grid = grid()
