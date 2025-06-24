@@ -230,7 +230,7 @@ def press_play(big_token, small_token, medium_token, otrio_grid):
     else:
         return otrio_grid
 
-def winner_winner_chicken_dinner(otrio_inserts):
+def winner(otrio_inserts):
     for i in range(3):
         #check if they are small tokens
         #check medium tokens
@@ -272,7 +272,7 @@ press_start()
 
 
 
-#Worthless line... Could be useful for later
+#Bugs, Problems, Worthless and funny things I wrote in the PPP
 
 # def my_function():
      
@@ -492,3 +492,4 @@ press_start()
 #         else:
 #                     print("You have failed my expectations. You are worthless.")
 # show_grid = grid()
+# def winner_winner_chicken_dinner(otrio_inserts):
