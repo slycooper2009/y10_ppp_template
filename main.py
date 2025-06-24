@@ -388,3 +388,77 @@ press_start()
             #print("You truly are not worthy of this.")
 #    else:
  #       print(Fore.YELLOW + "Don't make me laugh that is not a number you utter buffoon. ")
+    # try_again = False
+    #while try_again == False:
+     #  num = 0
+      #  ai_column = randint(65, 67)
+       # ai_tokens_combined = [ai_big_token[num], ai_small_token[num], ai_medium_token[num]]
+#        ai_piece = choice(ai_tokens_combined)
+ #       ai_i = 0
+  #      ai_n = 0
+   #     if ai_piece in ai_tokens_combined:
+    #        ai_tokens_combined.remove(ai_piece)
+     #       letter_for_row = ai_row
+      #      if letter_for_row == 41:
+       #         ai_i = 0
+        #    elif letter_for_row == 42:
+         #       ai_i = 1
+          #  elif letter_for_row == 43:
+           #     ai_i = 2
+            #if ai_column == 65 or ai_column == 66 or ai_column == 67:
+             #   if ai_column == 65:
+              #      ai_n = 0
+               # elif ai_column == 66:
+                #    ai_n = 1
+                #elif ai_column == 67:
+                 #   ai_n += 1
+ #       num += 1
+  #      if ai_i != i:
+   #         if ai_n != n:
+    #            otrio_grid[ai_i][ai_n] = ai_piece
+     #           print("=======")
+      #          for line in otrio_grid:
+       #             print(line)
+        #        print(ai_i, ai_n)
+         #       print("========")
+          #      otrio_inserts[ai_i][ai_n] = "Ai 1"
+           #     try_again = True
+
+
+# def opponent_two_horrible(i, n, otrio_grid, ai_big_token, ai_small_token, ai_medium_token):
+#     try_again = False
+#     while try_again == False:
+#         ai_row = randint(41, 43)
+#         num = 0
+#         ai_column = randint(65, 67)
+#         ai_tokens_combined = [ai_big_token[num], ai_small_token[num], ai_medium_token[num]]
+#         ai_piece = choice(ai_tokens_combined)
+#         print("======")
+#         print(ai_tokens_combined)
+#         print("======")
+#         ai_i = 0
+#         ai_n = 0
+#         if ai_piece in ai_tokens_combined:
+#             ai_tokens_combined.remove(ai_piece)
+#             letter_for_row = ai_row
+#             if letter_for_row == 41:
+#                 ai_i = 0
+#             elif letter_for_row == 42:
+#                 ai_i = 1
+#             elif letter_for_row == 43:
+#                 ai_i = 2
+#             if ai_column == 65 or ai_column == 66 or ai_column == 67:
+#                 if ai_column == 65:
+#                     ai_n = 0
+#                 elif ai_column == 66:
+#                     ai_n = 1
+#                 elif ai_column == 67:
+#                     ai_n += 1
+#         num += 1
+#         if ai_i != i:
+#             if ai_n != n:
+#                 otrio_grid[i][n] = ai_piece
+#                 print("=======")
+#                 for line in otrio_grid:
+#                     print(line)
+#                 try_again = True
